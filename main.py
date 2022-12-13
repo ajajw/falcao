@@ -11,20 +11,29 @@ import random
 
 
 from defs import getUrl, getcards, phone
-API_ID =  1667849
-API_HASH = 'b719710209932bff18219f4064e92388'
-SEND_CHAT = '@cyph33'
+API_ID =  27337131
+API_HASH = '695a43d29e73423ad4142b20a736ea42'
+SEND_CHAT = '@staikergodholaquehacemibb'
 
 client = TelegramClient('session', API_ID, API_HASH)
 ccs = []
 
 chats  = [
     # '@fullcuentasgratis','
-    '@uchihaworld',
-    '@ScrapperLost',
-    '@JLScrapper',
-    '@MacacosCC',
-    '@LiveCCFam'   
+    '@nexon_community',
+    '@SitesYCCS',
+    '@ddrbinscc',
+    '@LiveCCFam',
+    '@i_DropCCs',
+    '@CcsTeamUrban1',
+    '@Live_Credit_Card',
+    '@fullccshack',
+    '@CCsfreehere',
+    '@TeamBlckCard',
+    '@ItachiBins',
+    '@alvkslspqpqpqoqq',                                                  '@CCAUTH',
+    '@TEST123ND',
+    '@LOYOAS'   
 ]
 
 with open('cards.txt', 'r') as r:
@@ -55,25 +64,22 @@ async def my_event_handler(m):
     if cc in ccs:
         return
     ccs.append(cc)
-    bin = requests.get(f'https://adyen-enc-and-bin-info.herokuapp.com/bin/{cc[:6]}')
+    bin = requests.get(f'http://binchk-api.vercel.app/bin={cc[:6]}')
     if not bin:
-        return
-    bin_json =  bin.json()
-    addr = real_random_address()
-    fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
-    text = f"""
-╔═══════════════════════╗
-╟ ● **Scrapper** 
-╟═══════════════════════╝
-╟ ● __CC__:
-╟ ╙ `{cc}|{mes}|{ano}|{cvv}`
-╟ ● __INFO__:
-╟ ╙ {bin_json['vendor']} - {bin_json['type']} - {bin_json['level']}
-╟ ╙ {bin_json['bank']}
-╟ ╙ {bin_json['country_iso']} - {bin_json['flag']}
-╟ ● __FULL INFO__:
-╟ ╙ {fullinfo}
-╚═══════════════════════╝
+        return                                                            bin_json =  bin.json()                                                addr = real_random_address()
+    fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr[
+'address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"                                                              text = f"""
+◆ ▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬ ◆
+╟ 点 **𝚂𝚌𝚛𝚊𝚙𝚙𝚎𝚛 𝚉𝚘𝚗𝚊 𝙰𝚍𝚖𝚒𝚗** 点
+◆ ▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬ ◆
+╟ [🝂] 𝗟𝗶𝘃𝗲 🟢:
+╟ — `{cc}|{mes}|{ano}|{cvv}`
+╟ [🝂] 𝗜𝗻𝗳𝗼 :
+╟ 🔎 {bin_json['scheme']}
+╟ 🏦 {bin_json['bank']}
+╟ 🌐 {bin_json['country']} - {bin_json['code']}
+╟ [🝂] 𝙊𝙬𝙣𝙚𝙧𝙨 : @jimmytowers & @DiegoAkk
+◆ ▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬ ◆
 """    
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
