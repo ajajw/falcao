@@ -64,6 +64,7 @@ async def my_event_handler(m):
     if cc in ccs:
         return
     ccs.append(cc)
+    extra = cc[0:0+12]
     bin = requests.get(f'http://binchk-api.vercel.app/bin={cc[:6]}')
     if not bin:
         return                                                            bin_json =  bin.json()                                                addr = real_random_address()
@@ -78,6 +79,7 @@ async def my_event_handler(m):
 ╟ 🔎 {bin_json['scheme']}
 ╟ 🏦 {bin_json['bank']}
 ╟ 🌐 {bin_json['country']} - {bin_json['code']}
+Extra : '{extra}xxxx|{mes}|{ano}|rnd'
 ╟ [🝂] 𝙊𝙬𝙣𝙚𝙧𝙨 : @jimmytowers & @DiegoAkk
 ◆ ▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬ ◆
 """    
