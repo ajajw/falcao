@@ -72,16 +72,17 @@ async def my_event_handler(m):
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""                                       ╟ 点 **𝚂𝚌𝚛𝚊𝚙𝚙𝚎𝚛 𝚉𝚘𝚗𝚊 𝙰𝚍𝚖𝚒𝚗** 点
-◆ ▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬ ◆
+◆ ▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬ ◆
 ╟ [🝂] 𝗟𝗶𝘃𝗲 🟢:
 ╟ — `{cc}|{mes}|{ano}|{cvv}`
 ╟ [🝂] 𝗜𝗻𝗳𝗼 :
 ╟ 🔎 {bin_json['scheme']}
 ╟ 🏦 {bin_json['bank']}
 ╟ 🌐 {bin_json['country']} - {bin_json['code']}
+◆ ▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬ ◆
 ╟ [🝂] 𝗘𝘅𝘁𝗿𝗮 : `{extra}xxxx|{mes}|{ano}|{cvv}`
 ╟ [🝂] 𝙊𝙬𝙣𝙚𝙧𝙨 : @jimmytowers & @DiegoAkk
-◆ ▬▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬▬ ◆
+◆ ▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬ ◆
 """    
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
