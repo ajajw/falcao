@@ -82,7 +82,7 @@ async def my_event_handler(m):
 ╟ 🏦 {bin_json['bank']}
 ╟ 🌐 {bin_json['country']} - {bin_json['code']}
 ◆ ▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬ ◆
-╟ [🝂] 𝗘𝘅𝘁𝗿𝗮 : `{extra}xxxx|{mes}|{ano}|{cvv}`
+╟ [🝂] 𝗘𝘅𝘁𝗿𝗮 : `{extra}xxxx|{mes}|{ano}|rnd`
 ╟ [🝂] 𝙊𝙬𝙣𝙚𝙧𝙨 : @jimmytowers & @DiegoAkk
 ◆ ▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬ ◆
 """    
