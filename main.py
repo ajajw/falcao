@@ -72,13 +72,14 @@ async def my_event_handler(m):
     bin_json =  bin.json()
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
-    country_bandera = bin_json()["country"]["emoji"]
-    countryname= bin_json()["country"]["name"]
-    Bank = bin_json()["bank"]["name"]["emoji"]
-    Bank_url = bin_json()["bank"]["url"]
-    Bank_phone = bin_json()["bank"]["phone"]
-    Bank_citi = bin_json()["bank"]["city"]
-    td = bin_json()["scheme"]["type"]["brand"]
+    country_bandera = bin.json()["country"]["emoji"]
+    countryname= bin.json()["country"]["name"]
+    Bank = bin.json()["bank"]["name"]["emoji"]
+    Bank_url = bin.json()["bank"]["url"]
+    Bank_phone = bin
+json()["bank"]["phone"]
+    Bank_citi = bin.json()["bank"]["city"]
+    td = bin.json()["scheme"]["type"]["brand"]
     text = f"""
 ‒‒‒‒‒‒‒‒‒‒‒🔧‒‒‒‒‒‒‒‒‒‒‒                                      
 ╟ 点 **𝑺𝒄𝒓𝒂𝒑𝒑𝒆𝒓 𝑳𝒆𝒐𝒏 𝑩𝒊𝒏𝒏𝒆𝒓𝒔** 点
