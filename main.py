@@ -72,6 +72,12 @@ async def my_event_handler(m):
     bin_json =  bin.json()
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
+    country_bandera = bin_json()["country"]["emoji"]
+    countryname= bin_json()["country"]["name"]
+    Bank = bin_json()["bank"]["name"]
+    Bank_url = bin_json()["bank"]["url"]
+    Bank_phone = bin_json()["bank"]["phone"]
+    Bank_citi = bin_json()["bank"]["city"]
     text = f"""
 ‒‒‒‒‒‒‒‒‒‒‒🔧‒‒‒‒‒‒‒‒‒‒‒                                      
 ╟ 点 **𝑺𝒄𝒓𝒂𝒑𝒑𝒆𝒓 𝑳𝒆𝒐𝒏 𝑩𝒊𝒏𝒏𝒆𝒓𝒔** 点
@@ -79,12 +85,7 @@ async def my_event_handler(m):
 ╟ [🝂] 𝗖𝗰 :
 ╟ — `{cc}|{mes}|{ano}|{cvv}`
 ╟ [🝂] 𝗜𝗻𝗳𝗼 :
-country_bandera = bin_json()["country"]["emoji"]
-countryname= bin_json()["country"]["name"]
-Bank = bin_json()["bank"]["name"]
-Bank_url = bin_json()["bank"]["url"]
-Bank_phone = bin_json()["bank"]["phone"]
-Bank_citi = bin_json()["bank"]["city"]
+
 ‒‒‒‒‒‒‒‒‒‒‒🔧‒‒‒‒‒‒‒‒‒‒‒
 ╟ [🝂] 𝗘𝘅𝘁𝗿𝗮 : `{extra}xxxx|{mes}|{ano}|xxx`
 ╟ [🝂] 𝙊𝙬𝙣𝙚𝙧𝙨 : @straiker & @DiegoAkk
