@@ -76,8 +76,7 @@ async def my_event_handler(m):
     countryname= bin.json()["country"]["name"]
     Bank = bin.json()["bank"]["name"]["emoji"]
     Bank_url = bin.json()["bank"]["url"]
-    Bank_phone = bin
-json()["bank"]["phone"]
+    Bank_phone = bin.json()["bank"]["phone"]
     Bank_citi = bin.json()["bank"]["city"]
     td = bin.json()["scheme"]["type"]["brand"]
     text = f"""
