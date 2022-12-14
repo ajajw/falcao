@@ -79,8 +79,8 @@ async def my_event_handler(m):
 ╟ [🝂] 𝗖𝗰 :
 ╟ — `{cc}|{mes}|{ano}|{cvv}`
 ╟ [🝂] 𝗜𝗻𝗳𝗼 :
-╟ 🔎 {bin_json['scheme']} - {bin_json['type']}
-╟ 🏦 {bin_json['bank']}
+╟ 🔎 {bin_json['scheme']} - {bin_json['type']} -  {bin_json['brand']}
+╟ 🏦 {bin_json['bank']['name']}
 ╟ 🌐 {bin_json['country']}
 ‒‒‒‒‒‒‒‒‒‒‒🔧‒‒‒‒‒‒‒‒‒‒‒
 ╟ [🝂] 𝗘𝘅𝘁𝗿𝗮 : `{extra}xxxx|{mes}|{ano}|xxx`
