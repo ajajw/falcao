@@ -81,7 +81,7 @@ async def my_event_handler(m):
 ╟ [🝂] 𝗜𝗻𝗳𝗼 :
 ╟ 🔎 {bin_json['scheme']} - {bin_json['type']} - {bin_json['brand']}
 ╟ 🏦 {bin_json['bank']['name']}
-╟ 🌐 {bin_json['country']['name']['emoji']}
+╟ 🌐 {bin_json['country']['name']} 
 ‒‒‒‒‒‒‒‒‒‒‒🔧‒‒‒‒‒‒‒‒‒‒‒
 ╟ [🝂] 𝗘𝘅𝘁𝗿𝗮 : `{extra}xxxx|{mes}|{ano}|xxx`
 ╟ [🝂] 𝙊𝙬𝙣𝙚𝙧𝙨 : @straiker & @DiegoAkk
