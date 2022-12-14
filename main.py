@@ -74,7 +74,7 @@ async def my_event_handler(m):
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     country_bandera = bin_json()["country"]["emoji"]
     countryname= bin_json()["country"]["name"]
-    Bank = bin_json()["bank"]["name"]
+    Bank = bin_json()["bank"]["name"]["emoji"]
     Bank_url = bin_json()["bank"]["url"]
     Bank_phone = bin_json()["bank"]["phone"]
     Bank_citi = bin_json()["bank"]["city"]
@@ -85,7 +85,8 @@ async def my_event_handler(m):
 ╟ [🝂] 𝗖𝗰 :
 ╟ — `{cc}|{mes}|{ano}|{cvv}`
 ╟ [🝂] 𝗜𝗻𝗳𝗼 :
-
+╟ 🔎 {bin_json['scheme']} - {bin_json['type']} - {bin_json['brand']
+╟ 🏦 `{Bank}`
 ‒‒‒‒‒‒‒‒‒‒‒🔧‒‒‒‒‒‒‒‒‒‒‒
 ╟ [🝂] 𝗘𝘅𝘁𝗿𝗮 : `{extra}xxxx|{mes}|{ano}|xxx`
 ╟ [🝂] 𝙊𝙬𝙣𝙚𝙧𝙨 : @straiker & @DiegoAkk
