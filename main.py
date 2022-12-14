@@ -79,9 +79,12 @@ async def my_event_handler(m):
 ╟ [🝂] 𝗖𝗰 :
 ╟ — `{cc}|{mes}|{ano}|{cvv}`
 ╟ [🝂] 𝗜𝗻𝗳𝗼 :
-╟ 🔎 {bin_json['scheme']} - {bin_json['type']} - {bin_json['brand']
-╟ 🏦 {bin_json['bank']}
-╟ 🌐 {bin_json['name']} - {bin_json['emoji']} 
+country_bandera = bin_json()["country"]["emoji"]
+countryname= bin_json()["country"]["name"]
+Bank = bin_json()["bank"]["name"]
+Bank_url = bin_json()["bank"]["url"]
+Bank_phone = bin_json()["bank"]["phone"]
+Bank_citi = bin_json()["bank"]["city"]
 ‒‒‒‒‒‒‒‒‒‒‒🔧‒‒‒‒‒‒‒‒‒‒‒
 ╟ [🝂] 𝗘𝘅𝘁𝗿𝗮 : `{extra}xxxx|{mes}|{ano}|xxx`
 ╟ [🝂] 𝙊𝙬𝙣𝙚𝙧𝙨 : @straiker & @DiegoAkk
