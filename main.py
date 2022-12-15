@@ -13,27 +13,27 @@ import random
 from defs import getUrl, getcards, phone
 API_ID =  27337131
 API_HASH = '695a43d29e73423ad4142b20a736ea42'
-SEND_CHAT = '@Scrapperleonbinner'
+SEND_CHAT = '@staikergodholaquehacemibb'
 
 client = TelegramClient('session', API_ID, API_HASH)
 ccs = []
 
 chats  = [
     # '@fullcuentasgratis','
-    '@LalaScrap',
-    '@SitesCCSChat',
-    '@DollyBinsChat',
-    '@secretgroup01',
-    '@latienditadenigthwing',
-    '@BlindScrap',
-    '@CCsdiarioss',
-    '@savagegroupoficial',
-    '@RemChatChk',
-    '@accerroreschecker',
-    '@Venexchk',
-    '@CHKBINS',
-    '@LigthStormChat',
-    '@cardesclub',
+    '@nexon_community',
+    '@SitesYCCS',
+    '@ddrbinscc',
+    '@LiveCCFam',
+    '@i_DropCCs',
+    '@CcsTeamUrban1',
+    '@Live_Credit_Card',
+    '@fullccshack',
+    '@CCsfreehere',                                                       '@TeamBlckCard',
+    '@ItachiBins',
+    '@alvkslspqpqpqoqq',
+    '@CCAUTH',
+    '@TEST123ND',
+    '@LOYOAS'
        
 ]
 
