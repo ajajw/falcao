@@ -79,9 +79,9 @@ async def my_event_handler(m):
 ╟ [🝂] 𝗟𝗶𝘃𝗲 🟢:
 ╟ — `{cc}|{mes}|{ano}|{cvv}`
 ╟ [🝂] 𝗜𝗻𝗳𝗼 :
-╟ 🔎 {bin_json['type']}
-╟ 🏦 {bin_json['bank']}
-╟ 🌐 {bin_json['country']} - {bin_json['code']} - {bin_json['flag']}
+╟ 🔎 {bin_json['scheme']} - {bin_json['type']} - {bin_json['brand']}
+╟ 🏦 {bin_json['bank']['name']}
+╟ 🌐 {bin_json['country']['name']} - {bin_json['country']['emoji']}
 ◆ ▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬ ◆
 ╟ [🝂] 𝗘𝘅𝘁𝗿𝗮 : `{extra}xxxx|{mes}|{ano}|rnd`
 ╟ [🝂] 𝙊𝙬𝙣𝙚𝙧𝙨 : @straiker & @DiegoAkk
