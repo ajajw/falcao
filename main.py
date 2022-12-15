@@ -66,7 +66,7 @@ async def my_event_handler(m):
         return
     ccs.append(cc)
     extra = cc[0:0+12]
-    bin = requests.get(f'https://lookup.binlist.net/{cc[:6]}')
+    bin = requests.get(f'https://binchk-api.vercel.app/bin={cc[:6]}')
     if not bin:
         return
     bin_json =  bin.json()
@@ -79,9 +79,9 @@ async def my_event_handler(m):
 ╟ [🝂] 𝗖𝗰 :
 ╟ — `{cc}|{mes}|{ano}|{cvv}`
 ╟ [🝂] 𝗜𝗻𝗳𝗼 :
-╟ 🔎 {bin_json['scheme']} - {bin_json['type']} - {bin_json['brand']}
-╟ 🏦 {bin_json['bank']['name']}
-╟ 🌐 {bin_json['country']['name']} - {bin_json['country']['emoji']}
+╟ 🔎 {bin_json['type']}
+╟ 🏦 {bin_json['bank']}
+╟ 🌐 {bin_json['country']} - {bin_json['code']} - {bin_json['flag']}
 ‒‒‒‒‒‒‒‒‒‒‒🔧‒‒‒‒‒‒‒‒‒‒‒
 ╟ [🝂] 𝗘𝘅𝘁𝗿𝗮 : `{extra}xxxx|{mes}|{ano}|xxx`
 ╟ [🝂] 𝙊𝙬𝙣𝙚𝙧𝙨 : @straiker & @DiegoAkk
