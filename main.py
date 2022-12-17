@@ -13,7 +13,7 @@ import random
 from defs import getUrl, getcards, phone
 API_ID =  27337131
 API_HASH = '695a43d29e73423ad4142b20a736ea42'
-SEND_CHAT = '@staikergodholaquehacemibb'
+SEND_CHAT = -1001538283887
 
 client = TelegramClient('session', API_ID, API_HASH)
 ccs = []
@@ -74,7 +74,7 @@ async def my_event_handler(m):
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""
 ◆ ▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬ ◆                                      
-╟ 点 𝚂𝚌𝚛𝚊𝚙𝚙𝚎𝚛 𝚉𝚘𝚗𝚊 𝙰𝚍𝚖𝚒𝚗 点
+╟ 点 𝙸𝚋𝚊𝚒 𝚂𝚌𝚛𝚊𝚙𝚙𝚎𝚛 点
 ◆ ▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬ ◆
 ╟ [🝂] 𝗟𝗶𝘃𝗲 🟢:
 ╟ — `{cc}|{mes}|{ano}|{cvv}`
