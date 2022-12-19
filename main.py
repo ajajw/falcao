@@ -20,20 +20,19 @@ ccs = []
 
 chats  = [
     # '@fullcuentasgratis','
-    '@LalaScrap',
-    '@SitesCCSChat',
-    '@DollyBinsChat',
-    '@secretgroup01',
-    '@latienditadenigthwing',
-    '@BlindScrap',
-    '@CCsdiarioss',
-    '@savagegroupoficial',
-    '@RemChatChk',
-    '@accerroreschecker',
-    '@Venexchk',
-    '@CHKBINS',
-    '@LigthStormChat',
-    '@cardesclub'
+    '@nexon_community',
+    '@SitesYCCS',
+    '@ddrbinscc',
+    '@LiveCCFam',
+    '@i_DropCCs',
+    '@CcsTeamUrban1',                                               '@Live_Credit_Card',
+    '@fullccshack',
+    '@CCsfreehere',                                                       '@TeamBlckCard',
+    '@ItachiBins',
+    '@alvkslspqpqpqoqqq',
+    '@CCAUTH',
+    '@TEST123ND',
+    '@LOYOAS'
        
 ]
 
@@ -66,25 +65,23 @@ async def my_event_handler(m):
         return
     ccs.append(cc)
     extra = cc[0:0+12]
-    bin = requests.get(f'https://binchk-api.vercel.app/bin={cc[:6]}')
+    bin = requests.get(f'https://www.binapi.co.uk/bin={cc[:6]}')
     if not bin:
         return
     bin_json =  bin.json()
     addr = real_random_address()
-    fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""
-——————————◆——————————                                      
-╟ ♧ 𝑺𝒄𝒓𝒂𝒑𝒑𝒆𝒓 𝑪𝑪 「𝚃𝙱」 ♧  
-——————————◆——————————
-╟ [🝂] 𝗖𝗰:
-╟ — `{cc}|{mes}|{ano}|{cvv}`
-╟ [🝂] 𝗜𝗻𝗳𝗼 :
-╟ 🔎 {bin_json['type']}
-╟ 🏦 {bin_json['bank']}
-╟ 🌐 {bin_json['country']} - {bin_json['code']} - {bin_json['flag']}
-╟ [🝂] 𝗘𝘅𝘁𝗿𝗮 : `{extra}xxxx|{mes}|{ano}|rnd`
-╟ [🝂] 𝙊𝙬𝙣𝙚𝙧𝙨 : @XerozSploitTae & @DiegoAkk
-——————————◆——————————
+💵 𝘾𝘾:  `{cc}|{mes}|{ano}|{cvv}`
+
+📝𝘽𝙄𝙉 𝙄𝙉𝙁𝙊: '{cc[:6]}' {bin_json['brand']} - {bin_json['type']} - {bin_json['level']}
+
+{bin_json['bank']}
+
+𝘾𝙊𝙐𝙉𝙏𝙍𝙔:  {bin_json['country']} - {bin_json['code']} - {bin_json['flag']}
+
+𝙀𝙓𝙏𝙍𝘼 `{extra}xxxx|{mes}|{ano}|rnd`
+
+𝙊𝙬𝙣𝙚𝙧𝙨 : @XerozSploitTae & @DiegoAkk
 """    
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
