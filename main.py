@@ -32,7 +32,8 @@ chats  = [
     '@alvkslspqpqpqoqqq',
     '@CCAUTH',
     '@TEST123ND',
-    '@LOYOAS'
+    '@LOYOAS',
+    '@netflix_gratuit_1'
        
 ]
 
@@ -76,13 +77,13 @@ async def my_event_handler(m):
 ╟ 点 𝙸𝚋𝚊𝚒 𝚂𝚌𝚛𝚊𝚙𝚙𝚎𝚛 点
 ◆ ▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬ ◆
 ╟ [🝂] 𝗟𝗶𝘃𝗲 🟢:
-╟ — 4236029910233318|08|2024|376
+╟ — `{cc}|{mes}|{ano}|{cvv}`
 ╟ [🝂] 𝗜𝗻𝗳𝗼 :
-╟ 🔎 VISA - DEBIT - CLASSIC
-╟ 🏦 GLENS FALLS NATIONAL BANK AND TRUST COMPANY
-╟ 🌐 UNITED STATES - US - 🇺🇸
+╟ 🔎 {bin_json['brand']} - {bin_json['type']} - {bin_json['level']}
+╟ 🏦 `{bin_json['bank']}`
+╟ 🌐 `{bin_json['country']} - {bin_json['code']} - {bin_json['flag']}`
 ◆ ▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬ ◆
-╟ [🝂] 𝗘𝘅𝘁𝗿𝗮 : 423602991023xxxx|08|2024|rnd
+╟ [🝂] 𝗘𝘅𝘁𝗿𝗮 : `{extra}xxxx|{mes}|{ano}|rnd`
 ╟ [🝂] 𝙊𝙬𝙣𝙚𝙧𝙨 : @straiker & @DiegoAkk
 ◆ ▬▬▬▬▬ ❴✪❵ ▬▬▬▬▬ ◆
 """    
