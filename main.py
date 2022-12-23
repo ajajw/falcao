@@ -92,7 +92,7 @@ async def my_event_handler(m):
         w.write(fullinfo + '\n')
     await client.send_message(SEND_CHAT, text, link_preview = False)
 
-
+    print(f'S3xyDrops V1.0\n Card => {cc}\n Date => {mes}/{ano}\n Cvv => {cvv}\n Author => @S3xyAlec\n\n')
 
 
 @client.on(events.NewMessage(outgoing = True, pattern = re.compile(r'[./!]extrap( (.*))')))
