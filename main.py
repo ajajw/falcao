@@ -90,10 +90,7 @@ async def my_event_handler(m):
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
         w.write(fullinfo + '\n')
-    await client.send_message(SEND_CHAT, text, link_preview = False)
-
-    print(f'S3xyDrops V1.0\n Card => {cc}\n Date => {mes}/{ano}\n Cvv => {cvv}\n Author => @S3xyAlec\n\n')
-
+    await client.send_message(SEND_CHAT, text, file = 'ibai.jpg')
 
 @client.on(events.NewMessage(outgoing = True, pattern = re.compile(r'[./!]extrap( (.*))')))
 async def my_event_handler(m):
