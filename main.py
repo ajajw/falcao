@@ -11,8 +11,8 @@ import random
 
 
 from defs import getUrl, getcards, phone
-API_ID =  23500211
-API_HASH = '16c6538f21d16cbf861c30e581eba780'
+API_ID =  20597671
+API_HASH = 'e89f2c4056dd402bef8299bce660cbcd'
 SEND_CHAT = -1001538283887
 
 client = TelegramClient('session', API_ID, API_HASH)
@@ -25,14 +25,17 @@ chats  = [
     '@ddrbinscc',
     '@LiveCCFam',
     '@i_DropCCs',
-    '@CcsTeamUrban1',                                               '@Live_Credit_Card',
+    '@CcsTeamUrban1',
+    '@Live_Credit_Card',
     '@fullccshack',
-    '@CCsfreehere',                                                       '@TeamBlckCard',
+    '@CCsfreehere',
+    '@TeamBlckCard',
+    '@onyxlivesempire',
     '@ItachiBins',
     '@alvkslspqpqpqoqqq',
-    '@CCAUTH',
-    '@TEST123ND',
+    '@CCAUTH',                                                            '@TEST123ND',
     '@LOYOAS',
+    '@cclivesblackeagle',
     '@netflix_gratuit_1'
        
 ]
@@ -84,12 +87,12 @@ async def my_event_handler(m):
                **☘ INFO CARD ☘**
 — — — — — — — — — — — — — — —
 
-[🝂] 𝘽𝙞𝙣 𝗜𝗻𝗳𝗼 - 431231
-[🝂] **𝗜𝗻𝗳𝗼 - {bin_json['brand']} - {bin_json['type']} - {bin_json['level']}**
-[🝂] 𝘽𝙖𝙣𝙠 - {bin_json['bank']}
-[🝂] 𝘾𝙤𝙪𝙣𝙩𝙧𝙮 - {bin_json['country']} - {bin_json['code']} - {bin_json['flag']}
+[🝂] 𝘽𝙞𝙣 𝗜𝗻𝗳𝗼 - `{cc[:6]}`
+[🝂] **𝗜𝗻𝗳𝗼 - `{bin_json['brand']} - {bin_json['type']} - {bin_json['level']}**`
+[🝂] 𝘽𝙖𝙣𝙠 - `{bin_json['bank']}`
+[🝂] 𝘾𝙤𝙪𝙣𝙩𝙧𝙮 - `{bin_json['country']} - {bin_json['code']} - {bin_json['flag']}`
 ━━━━━━━━━━━━━━━━
-[🝂] 𝗘𝘅𝘁𝗿𝗮 {extra}xxxx|{mes}|{ano}|rnd
+[🝂] 𝗘𝘅𝘁𝗿𝗮 `{extra}xxxx|{mes}|{ano}|rnd`
 ━━━━━━━━━━━━━━━━
 """    
     print(f'{cc}|{mes}|{ano}|{cvv}')
