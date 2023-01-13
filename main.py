@@ -20,23 +20,13 @@ ccs = []
 
 chats  = [
     # '@fullcuentasgratis','
-    '@nexon_community',
-    '@SitesYCCS',
-    '@ddrbinscc',
-    '@LiveCCFam',
-    '@i_DropCCs',
-    '@CcsTeamUrban1',
-    '@Live_Credit_Card',
-    '@fullccshack',
-    '@CCsfreehere',
-    '@TeamBlckCard',
-    '@onyxlivesempire',
-    '@ItachiBins',
-    '@alvkslspqpqpqoqqq',
-    '@CCAUTH',                                                            '@TEST123ND',
-    '@LOYOAS',
     '@cclivesblackeagle',
-    '@netflix_gratuit_1'
+    '@CcsTeamUrban1',
+    '@TEST123ND',
+    '@SitesYCCS',
+    '@livesfree2023',
+    '@onyxlivespublic',
+    '@qkkkkkkpeluax'
        
 ]
 
@@ -79,8 +69,7 @@ async def my_event_handler(m):
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
              **点 𝙸𝚋𝚊𝚒 𝚂𝚌𝚛𝚊𝚙𝚙𝚎𝚛 点**
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬                                     
-**Card** ➪ 4634830000003141|11|2025|148
-
+**Card** ➪ `{cc}|{mes}|{ano}|{cvv}`
 **Status ➪ Approved! ✅**
 
 — — — — — — — — — — — — — — —
@@ -88,7 +77,7 @@ async def my_event_handler(m):
 — — — — — — — — — — — — — — —
 
 [🝂] 𝘽𝙞𝙣 𝗜𝗻𝗳𝗼 - `{cc[:6]}`
-[🝂] **𝗜𝗻𝗳𝗼 - `{bin_json['brand']} - {bin_json['type']} - {bin_json['level']}**`
+[🝂] 𝗜𝗻𝗳𝗼 - `{bin_json['brand']} - {bin_json['type']} - {bin_json['level']}`
 [🝂] 𝘽𝙖𝙣𝙠 - `{bin_json['bank']}`
 [🝂] 𝘾𝙤𝙪𝙣𝙩𝙧𝙮 - `{bin_json['country']} - {bin_json['code']} - {bin_json['flag']}`
 ━━━━━━━━━━━━━━━━
@@ -98,7 +87,7 @@ async def my_event_handler(m):
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
         w.write(fullinfo + '\n')
-    await client.send_message(SEND_CHAT, text, file = 'ibai.jpg')
+    await client.send_message(SEND_CHAT, text, file = 'ibai-koi.mp4')
 
 @client.on(events.NewMessage(outgoing = True, pattern = re.compile(r'[./!]extrap( (.*))')))
 async def my_event_handler(m):
