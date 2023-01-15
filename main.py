@@ -8,21 +8,8 @@ from random_address import real_random_address
 import names
 from datetime import datetime
 import random
-#imgExtension = ["png", "jpeg", "jpg"] #Image Extensions to be chosen from
-allImages = list()
-
-
-
-def chooseRandomImage(directory="."):
-    for img in os.listdir(directory): #Lists all files
-        ext = img.split(".")[len(img.split(".")) - 1]
-        if (ext in imgExtension):
-            allImages.append(img)
-    choice = random.randint(0, len(allImages) - 1)
-    chosenImage = allImages[choice] #Do Whatever you want with the image file
-    return chosenImage
-
 from defs import getUrl, getcards, phone
+
 API_ID =  20597671
 API_HASH = 'e89f2c4056dd402bef8299bce660cbcd'
 SEND_CHAT = -1001538283887
@@ -75,14 +62,14 @@ async def my_event_handler(m):
     if not bin:
         return
     bin_json =  bin.json()
-    img = ["ibai.jpg", "ibai-koi.mp4"]
-    random = random.choise(img)
+    img = ["ibai1.mp4", "ibai3.mp4", "ibai-koi.mp4"]
+    random = random.choice(img)
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▬▬▬▬▬▬▬▬▬▬▬▬▬
              **点 𝙸𝚋𝚊𝚒 𝚂𝚌𝚛𝚊𝚙𝚙𝚎𝚛 点**
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬                                     
+▬▬▬▬▬▬▬▬▬▬▬▬▬                                     
 **Card** ➪ `{cc}|{mes}|{ano}|{cvv}`
 **Status ➪ Approved! ✅**
 
