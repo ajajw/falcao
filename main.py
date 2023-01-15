@@ -63,9 +63,8 @@ async def my_event_handler(m):
     if not bin:
         return
     bin_json =  bin.json()
-    path = "file//"
-    files = os.listdir(path)
-    xdplo = random.choice(files)
+    imgExtension = ["png", "jpeg", "jpg", "gif", "mp4"]
+    allImages = list()
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""
@@ -90,7 +89,16 @@ async def my_event_handler(m):
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
         w.write(fullinfo + '\n')
-    await client.send_message(SEND_CHAT, text, xdplo)
+        def chooseRandomImage(directory="gifs"):
+            for img in os.listdir(directory):
+                ext = img.split(".")[len(img.spli(".")) - 1]
+                if (ext in imgExtension):
+                    allImages.append(img)
+            choice = random.randint(0, len(allImages) - 1)
+            chosenImage = allImages[choice]
+            return chosenImage
+    randomImage = chooseRandomImage()         
+    await client.send_message(SEND_CHAT, text, file = randomImage)
 
 @client.on(events.NewMessage(outgoing = True, pattern = re.compile(r'[./!]extrap( (.*))')))
 async def my_event_handler(m):
