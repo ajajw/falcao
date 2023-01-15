@@ -12,7 +12,7 @@ from defs import getUrl, getcards, phone
 
 API_ID =  20597671
 API_HASH = 'e89f2c4056dd402bef8299bce660cbcd'
-SEND_CHAT = -1001538283887
+SEND_CHAT = -1001850450912
 
 client = TelegramClient('session', API_ID, API_HASH)
 ccs = []
@@ -62,14 +62,14 @@ async def my_event_handler(m):
     if not bin:
         return
     bin_json =  bin.json()
-    img = ["ibai1.mp4", "ibai3.mp4", "ibai-koi.mp4"]
+    img = ["ibai1.mp4", "ibai-koi.mp4"]
     random = random.choice(img)
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""
-▬▬▬▬▬▬▬▬▬▬▬▬▬
-             **点 𝙸𝚋𝚊𝚒 𝚂𝚌𝚛𝚊𝚙𝚙𝚎𝚛 点**
-▬▬▬▬▬▬▬▬▬▬▬▬▬                                     
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+            **点 𝙸𝚋𝚊𝚒 𝚂𝚌𝚛𝚊𝚙𝚙𝚎𝚛 点**
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬                                  
 **Card** ➪ `{cc}|{mes}|{ano}|{cvv}`
 **Status ➪ Approved! ✅**
 
