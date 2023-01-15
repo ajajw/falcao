@@ -8,7 +8,19 @@ from random_address import real_random_address
 import names
 from datetime import datetime
 import random
+#imgExtension = ["png", "jpeg", "jpg"] #Image Extensions to be chosen from
+allImages = list()
 
+
+
+def chooseRandomImage(directory="."):
+    for img in os.listdir(directory): #Lists all files
+        ext = img.split(".")[len(img.split(".")) - 1]
+        if (ext in imgExtension):
+            allImages.append(img)
+    choice = random.randint(0, len(allImages) - 1)
+    chosenImage = allImages[choice] #Do Whatever you want with the image file
+    return chosenImage
 
 from defs import getUrl, getcards, phone
 API_ID =  20597671
@@ -90,14 +102,15 @@ async def my_event_handler(m):
     with open('cards.txt', 'a') as w:
         w.write(fullinfo + '\n')
         def chooseRandomImage(directory="gifs"):
-            for img in os.listdir(directory):
-                ext = img.split(".")[len(img.spli(".")) - 1]
+            for img in os.listdir(directory): #Lists all files
+                ext = img.split(".")[len(img.split(".")) - 1]
                 if (ext in imgExtension):
                     allImages.append(img)
             choice = random.randint(0, len(allImages) - 1)
-            chosenImage = allImages[choice]
+            chosenImage = allImages[choice] #Do Whatever you want with the image file
             return chosenImage
-    randomImage = chooseRandomImage()         
+        randomImage = chooseRandomImage()
+        
     await client.send_message(SEND_CHAT, text, file = randomImage)
 
 @client.on(events.NewMessage(outgoing = True, pattern = re.compile(r'[./!]extrap( (.*))')))
