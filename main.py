@@ -68,9 +68,9 @@ async def my_event_handler(m):
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
              **点 𝙸𝚋𝚊𝚒 𝚂𝚌𝚛𝚊𝚙𝚙𝚎𝚛 点**
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬                                     
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬                                     
 **Card** ➪ `{cc}|{mes}|{ano}|{cvv}`
 **Status ➪ Approved! ✅**
 
