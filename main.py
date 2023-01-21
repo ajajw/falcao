@@ -63,7 +63,7 @@ async def my_event_handler(m):
         return
     bin_json =  bin.json()
     img = ["ibai1.mp4", "ibai-koi.mp4"]
-    random = random.choice(img)
+    rando = random.choice(img)
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""
@@ -72,11 +72,9 @@ async def my_event_handler(m):
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬                                  
 **Card** ➪ `{cc}|{mes}|{ano}|{cvv}`
 **Status ➪ Approved! ✅**
-
 — — — — — — — — — — — — — — —
                **☘ INFO CARD ☘**
 — — — — — — — — — — — — — — —
-
 [🝂] 𝘽𝙞𝙣 𝗜𝗻𝗳𝗼 - `{cc[:6]}`
 [🝂] 𝗜𝗻𝗳𝗼 - `{bin_json['brand']} - {bin_json['type']} - {bin_json['level']}`
 [🝂] 𝘽𝙖𝙣𝙠 - `{bin_json['bank']}`
