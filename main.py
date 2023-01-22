@@ -11,20 +11,20 @@ import random
 
 
 from defs import getUrl, getcards, phone
-API_ID =  1667849
-API_HASH = 'b719710209932bff18219f4064e92388'
-SEND_CHAT = '@cyph33'
+API_ID =  24557787
+API_HASH = 'b49d50d8602653580cfeb8af3aeaa271'
+SEND_CHAT = -1001820297618
 
 client = TelegramClient('session', API_ID, API_HASH)
 ccs = []
 
 chats  = [
     # '@fullcuentasgratis','
-    '@uchihaworld',
-    '@ScrapperLost',
-    '@JLScrapper',
-    '@MacacosCC',
-    '@LiveCCFam'   
+    '@cclivesblackeagle',
+    '@CcsTeamUrban1',
+    '@TEST123ND',
+    '@SitesYCCS',
+    '@qkkkkkkpeluax'   
 ]
 
 with open('cards.txt', 'r') as r:
@@ -55,30 +55,30 @@ async def my_event_handler(m):
     if cc in ccs:
         return
     ccs.append(cc)
-    bin = requests.get(f'https://adyen-enc-and-bin-info.herokuapp.com/bin/{cc[:6]}')
+    bin = requests.get(f'https://projectslost.xyz/bin/?bin={cc[:6]}')
     if not bin:
         return
     bin_json =  bin.json()
+    extra = cc[0:0+12]
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""
-╔═══════════════════════╗
-╟ ● **Scrapper** 
-╟═══════════════════════╝
-╟ ● __CC__:
-╟ ╙ `{cc}|{mes}|{ano}|{cvv}`
-╟ ● __INFO__:
-╟ ╙ {bin_json['vendor']} - {bin_json['type']} - {bin_json['level']}
-╟ ╙ {bin_json['bank']}
-╟ ╙ {bin_json['country_iso']} - {bin_json['flag']}
-╟ ● __FULL INFO__:
-╟ ╙ {fullinfo}
-╚═══════════════════════╝
+🔱 𝙎𝙘𝙧𝙖𝙥𝙥𝙚𝙧 𝛥「𝚃𝙱」 𝙥𝙧𝙚𝙢𝙞𝙪𝙢 🔱    
+
+𝘾𝘾: `{cc}|{mes}|{ano}|{cvv}`
+**Status ➪ Approved! ✅**
+𝘽𝙞𝙣: `{cc[:6]}`
+𝘽𝙞𝙣 𝙏𝙮𝙥𝙚: `{bin_json['brand']} - {bin_json['type']} - {bin_json['level']}`
+𝘽𝙖𝙣𝙠: `{bin_json['bank']['name']}`
+𝘾𝙤𝙪𝙣𝙩𝙧𝙮: `{bin_json['country']['name']} - {bin_json['country']['flag']`
+━━━━━━━━━━━━━━━━
+𝙀𝙭𝙩𝙧𝙖 - `{extra}xxxx|{mes}|{ano}|rnd`
+━━━━━━━━━━━━━━━━
 """    
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
         w.write(fullinfo + '\n')
-    await client.send_message(SEND_CHAT, text, link_preview = False)
+    await client.send_message(SEND_CHAT, text, file = "tae.jpg")
 
 
 
