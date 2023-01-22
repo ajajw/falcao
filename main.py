@@ -25,6 +25,10 @@ chats  = [
     '@TEST123ND',
     '@SitesYCCS',
     '@qkkkkkkpeluax'   
+    '@dSnowChat',
+    '@LalaScrap',
+    '@BinsHellChat',
+    '@JohnnySinsChat'
 ]
 
 with open('cards.txt', 'r') as r:
