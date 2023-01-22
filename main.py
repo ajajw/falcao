@@ -10,9 +10,9 @@ from datetime import datetime
 import random
 from defs import getUrl, getcards, phone
 
-API_ID =  20597671
-API_HASH = 'e89f2c4056dd402bef8299bce660cbcd'
-SEND_CHAT = -1001850450912
+API_ID =  24557787
+API_HASH = 'b49d50d8602653580cfeb8af3aeaa271'
+SEND_CHAT = -1001820297618
 
 client = TelegramClient('session', API_ID, API_HASH)
 ccs = []
