@@ -59,7 +59,7 @@ async def my_event_handler(m):
     if cc in ccs:
         return
     ccs.append(cc)
-    bin = requests.get(f'https://projectslost.xyz/bin/?bin={cc[:6]}')
+    bin = requests.get(f'https://bins-su-ani.vercel.app/api/{cc[:6]}')
     if not bin:
         return
     bin_json =  bin.json()
@@ -67,17 +67,19 @@ async def my_event_handler(m):
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""
-💵 𝘾𝘾: `{cc}|{mes}|{ano}|{cvv}`
+#ScrapperTB
 
-📝𝘽𝙄𝙉 𝙄𝙉𝙁𝙊:  `{cc[:6]} {bin_json['brand']} - {bin_json['type']} - {bin_json['level']}`
+**💳 CC:** `{cc}|{mes}|{ano}|{cvv}`
 
-`{bin_json['bank']['name']}`
+**🌅 BIN INFO:** `{cc[:6]} {bin_json['data']['vendor']} - {bin_json['data']['type']} - {bin_json['data']['level']}`
 
-𝘾𝙊𝙐𝙉𝙏𝙍𝙔: `{bin_json['country']['name']} - {bin_json['country']['flag']`
+**💵 BANK:** `{bin_json['data']['bank']}`
 
-𝙀𝙓𝙏𝙍𝘼: `{extra}xxxx|{mes}|{ano}|rnd`
+**🏳 COUNTRY:** `{bin_json['data']['country']} - {bin_json['data']['countryInfo']['emoji']}`
 
-𝙊𝙬𝙣𝙚𝙧𝙨: @XerozSploitTae & @DiegoAkk
+**🛡 EXTRA:** `{extra}xxxx|{mes}|{ano}|rnd`
+
+**👨‍🔧 OWNERS:** @DiegoAkk & @XerozSploitTae
 """    
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
