@@ -13,7 +13,7 @@ import random
 from defs import getUrl, getcards, phone
 API_ID =  24557787
 API_HASH = 'b49d50d8602653580cfeb8af3aeaa271'
-SEND_CHAT = -1001820297618
+SEND_CHAT = -1001709140208
 
 client = TelegramClient('session', API_ID, API_HASH)
 ccs = []
@@ -24,11 +24,7 @@ chats  = [
     '@CcsTeamUrban1',
     '@TEST123ND',
     '@SitesYCCS',
-    '@qkkkkkkpeluax'   
-    '@dSnowChat',
-    '@LalaScrap',
-    '@BinsHellChat',
-    '@JohnnySinsChat'
+    '@qkkkkkkpeluax'
 ]
 
 with open('cards.txt', 'r') as r:
@@ -59,7 +55,7 @@ async def my_event_handler(m):
     if cc in ccs:
         return
     ccs.append(cc)
-    bin = requests.get(f'https://bins-su-ani.vercel.app/api/{cc[:6]}')
+    bin = requests.get(f'https://www.binapi.co.uk/bin={cc[:6]}')
     if not bin:
         return
     bin_json =  bin.json()
@@ -67,24 +63,27 @@ async def my_event_handler(m):
     addr = real_random_address()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}|{names.get_full_name()}|{addr['address1']}|{addr['city']}|{addr['state']}|{addr['postalCode']}|{phone()}|dob: {datetime.strftime(datetime(random.randint(1960, 2005), random.randint(1, 12),random.randint(1, 28), ), '%Y-%m-%d')}|United States Of America"
     text = f"""
-#ScrapperTB
-
-**💳 CC:** `{cc}|{mes}|{ano}|{cvv}`
-
-**🌅 BIN INFO:** `{cc[:6]} {bin_json['data']['vendor']} - {bin_json['data']['type']} - {bin_json['data']['level']}`
-
-**💵 BANK:** `{bin_json['data']['bank']}`
-
-**🏳 COUNTRY:** `{bin_json['data']['country']} - {bin_json['data']['countryInfo']['emoji']}`
-
-**🛡 EXTRA:** `{extra}xxxx|{mes}|{ano}|rnd`
-
-**👨‍🔧 OWNERS:** @DiegoAkk & @XerozSploitTae
+𝗦𝗰𝗿𝗮𝗽𝗽𝗲𝗿 𝗣𝗿𝗶𝘃𝗮𝘁𝗲 𝗸𝗮𝘆𝗼𝗸𝗼
+——————————————————
+💳**Card** - ☭ {cc}|{mes}|{ano}|{cvv}
+**Status ➪ Approved!** ✅
+——————————————————          
+  - [ **Kayoko Info** ] -
+——————————————————
+**Bin Info** - ☭ `{cc[:6]}`
+**Info** - ☭ `{bin_json['brand']} - {bin_json['type']} - {bin_json['leve
+l']}`
+**Bank** - ☭ `{bin_json['bank']}`
+**Country** - ☭ `{bin_json['country']} - {bin_json['code']} - {bin_json['flag']}`
+——————————————————
+**Extra** - ☭ `{extra}xxxx|{mes}|{ano}|rnd`
+——————————————————
+[ By @KayokoInfo ]
 """    
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
         w.write(fullinfo + '\n')
-    await client.send_message(SEND_CHAT, text, file = "mp4.mp4")
+    await client.send_message(SEND_CHAT, text, file = "nice.jpg")
 
 
 
