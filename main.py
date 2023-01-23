@@ -65,18 +65,18 @@ async def my_event_handler(m):
     text = f"""
 𝗦𝗰𝗿𝗮𝗽𝗽𝗲𝗿 𝗣𝗿𝗶𝘃𝗮𝘁𝗲 𝗸𝗮𝘆𝗼𝗸𝗼
 ——————————————————
-💳**Card** - ☭ {cc}|{mes}|{ano}|{cvv}
-**Status ➪ Approved!** ✅
+💳**Card - ☭** `{cc}|{mes}|{ano}|{cvv}`
+**Status ➪ Approved! ✅**
 ——————————————————          
-  - [ **Kayoko Info** ] -
+       - [ **Kayoko Info** ] -
 ——————————————————
 **Bin Info** - ☭ `{cc[:6]}`
-**Info** - ☭ `{bin_json['brand']} - {bin_json['type']} - {bin_json['leve
+**Info - ☭** `{bin_json['brand']} - {bin_json['type']} - {bin_json['leve
 l']}`
-**Bank** - ☭ `{bin_json['bank']}`
-**Country** - ☭ `{bin_json['country']} - {bin_json['code']} - {bin_json['flag']}`
+**Bank - ☭** `{bin_json['bank']}`
+**Country - ☭** `{bin_json['country']} - {bin_json['code']} - {bin_json['flag']}`
 ——————————————————
-**Extra** - ☭ `{extra}xxxx|{mes}|{ano}|rnd`
+**Extra - ☭** `{extra}xxxx|{mes}|{ano}|rnd`
 ——————————————————
 [ By @KayokoInfo ]
 """    
