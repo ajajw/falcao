@@ -72,11 +72,11 @@ async def my_event_handler(m):
 
 **🌿 BIN INFO:** - ☭ `{cc[:6]}` `{bin_json['brand']} - {bin_json['type']} - {bin_json['level']}`
 
-🌹BANK: `{bin_json['bank']['name']}`
+🌹 **BANK:** `{bin_json['bank']['name']}`
 
-🌷 COUNTRY: `{bin_json['country']['name']} - {bin_json['country']['flag']` 
+🌷 **COUNTRY:** `{bin_json['country']['name']} - {bin_json['country']['flag']` 
 
-🌱 Extra » 
+🌱 **Extra** » 
 ♡  ──────── ♡ ──────── 
 ❃. `{extra}xxxx|{mes}|{ano}|rnd` 
 ♡ ──────── ♡ ──────── ♡_
@@ -89,7 +89,7 @@ Referencias: @versacerefe
     print(f'{cc}|{mes}|{ano}|{cvv}')
     with open('cards.txt', 'a') as w:
         w.write(fullinfo + '\n')
-    await client.send_message(SEND_CHAT, text, file = "nice.jpg")
+    await client.send_message(SEND_CHAT, text, file = "versace.jpg")
 
 
 
