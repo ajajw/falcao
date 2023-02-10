@@ -25,7 +25,11 @@ chats  = [
       '@TheKillPro_Chat',
       '@TechzillaCheckerChat',
       '@versacechatp',
-      '@savagegroupoficial'
+      '@savagegroupoficial',
+      '@dSnowChat'.
+      '@AssociatonBinners1',
+      '@accerroreschecker',
+      '@BinsHellChat'
 
 
 ]
